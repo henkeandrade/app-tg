@@ -1,0 +1,25 @@
+.logo {
+    width: 64px;
+    cursor: pointer;
+}
+
+.header { margin-top: 16px }
+
+.header form {
+    display: flex;
+    margin-top: 16px;
+}
+
+.headerInputContainer {
+    margin-right: 8px;
+    width: 100%;
+}
+
+.headerInputContainer p { font-size: 14px }
+
+.serachData {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 16vw;
+}
