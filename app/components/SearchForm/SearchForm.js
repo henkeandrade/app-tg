@@ -33,7 +33,7 @@ export default function SearchForm(props) {
         <div className={styles.containerPage}>
             <div className={styles.containerImage}>
                 <img src="./logo.png" className={styles.logo}/>
-                <p className={styles.logoText}>Sua calculadora para<br /><strong>estimativa de produção agricola</strong></p>
+                <p className={styles.logoText}>Sua calculadora para<br /><strong>estimativa de cotação de soja</strong></p>
             </div>
             <form className={styles.containerForm} onSubmit={()=>submit()}>
                 {/* <div className='inputContainer'>
@@ -90,7 +90,7 @@ export default function SearchForm(props) {
                     <input className='inputContent' type="number" value={last_year} onChange={e => setLast_year(e.target.value)} required/>
                 </div>
 
-                <div className='inputContainer' >
+                <div className='inputContainer' style={{ fontWeight: 'bold' }}>
                     <input className='buttonSubmit' type="submit" />
                 </div>
             </form>

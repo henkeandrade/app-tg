@@ -35,7 +35,6 @@ export default function SearchResult(props) {
     if (props.dataSearch.result) {
         return(
             <div>
-                {console.log(yesterday_diff)}
                 <div className={`${styles.header} margin-page`}>
                     <div onClick={() => window.location.reload()}>
                         <img src="./logo.png" className={styles.logo}/>
@@ -83,17 +82,17 @@ export default function SearchResult(props) {
                 </div>
                 <div className={`${styles.body} margin-page`} style={{ marginBottom: 24 }}>
                     <div style={{ marginTop: 24 }}>
-                        <h1 className="title-card">Porcentagem aproveitável estimada</h1>
+                        <h1 className="title-card">Previsão da cotação estimada para amanhã</h1>
                         <div className="card">
                             <div style={{ display: 'flex' }}>
                                 <div style={{ display: 'flex', alignItems: 'center', width: '100%', justifyContent: 'center' }}>
-                                    <img src="results/80.png" style={{ width: 240 }}/>
-                                    <p style={{ fontWeight: 'bold', fontSize: 80 }}><span style={{ fontSize: 240, color: '#4caf50', margin: '0 0 0 40px'}}>{props.dataSearch.result.toFixed(2)}</span></p>
+                                    <img src="soy.png" style={{ width: '16vw' }}/>
+                                    <p style={{ fontWeight: 'bold', fontSize: 80 }}><span style={{ fontSize: '16vw', color: '#BC574A', margin: '0 0 0 40px'}}>{props.dataSearch.result.toFixed(2)}</span></p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="responsiveColumn" style={{ marginTop: 24, display: 'flex' }}>
+                    {/* <div className="responsiveColumn" style={{ marginTop: 24, display: 'flex' }}>
                         <div style={{width: '100%', marginRight: 12}}>
                             <h1 className="title-card">Dia anterior</h1>
                             <div className="card">
@@ -106,7 +105,7 @@ export default function SearchResult(props) {
                                 <img src="./fakeGraph.png" style={{ width: '50%', margin: 'auto', display: 'flex' }}/>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         );
