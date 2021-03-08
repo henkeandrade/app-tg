@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import styles from './SearchResult.module.css';
 import Loading from '../Loading/Loading';
+import NextDays from '../NextDays/NextDays';
 
 export default function SearchResult(props) {
     const [yesterday, setYesterday] = useState(props.content.yesterday);
@@ -36,76 +37,78 @@ export default function SearchResult(props) {
         return(
             <div>
                 <div className={`${styles.header} margin-page`}>
-                    <div onClick={() => window.location.reload()}>
+                    <div onClick={() => window.location.reload()} className={styles.headerPage}>
                         <img src="./logo.png" className={styles.logo}/>
                     </div>
-                    <form onSubmit={() => submit()}>
-                        <div className={styles.headerInputContainer}>
-                            <p className='inputTitle'>Hoje</p>
-                            <input className='inputContent' type="number" value={yesterday} onChange={e => setYesterday(e.target.value)} required/>
-                        </div>
-                        
-                        <div className={styles.headerInputContainer}>
-                            <p className='inputTitle'>Ontem</p>
-                            <input className='inputContent' type="number" value={yesterday_1} onChange={e => setYesterday_1(e.target.value)} required/>
-                        </div>
-                        
-                        <div className={styles.headerInputContainer} style={{ display: 'none' }}>
-                            <p className='inputTitle'>Valor do dia anterior</p>
-                            <input className='inputContent' type="number" value={yesterday_diff} onChange={e => setYesterday_diff(e.target.value)} required/>
-                        </div>
-                        
-                        <div className={styles.headerInputContainer}>
-                            <p className='inputTitle'>7 dias atrás</p>
-                            <input className='inputContent' type="number" value={last_week} onChange={e => setLast_week(e.target.value)} required/>
-                        </div>
-                        
-                        <div className={styles.headerInputContainer}>
-                            <p className='inputTitle'>30 dias atrás</p>
-                            <input className='inputContent' type="number" value={last_month} onChange={e => setLast_month(e.target.value)} required/>
-                        </div>
-                        
-                        <div className={styles.headerInputContainer}>
-                            <p className='inputTitle'>365 dias atrás</p>
-                            <input className='inputContent' type="number" value={last_year} onChange={e => setLast_year(e.target.value)} required/>
-                        </div>
-
-                        <div className={styles.headerInputContainer} style={{ marginRight: 0, width: 40 }}>
-                            <div className='buttonSubmit' style={{ marginTop: 26 }}>
-                                <label htmlFor="send">
-                                    <input id="send" type="submit" style={{ display: 'none' }}/>
-                                    <i className="fas fa-redo-alt" style={{ padding: 12, cursor: 'pointer' }}></i>
-                                </label>
+                    <div className={styles.noneLess1024}>
+                        <form onSubmit={() => submit()}>
+                            <div className={styles.headerInputContainer}>
+                                <p className='inputTitle'>Hoje</p>
+                                <input className='inputContent' type="number" value={yesterday} onChange={e => setYesterday(e.target.value)} required/>
                             </div>
-                        </div>
-                    </form>
+                            
+                            <div className={styles.headerInputContainer}>
+                                <p className='inputTitle'>Ontem</p>
+                                <input className='inputContent' type="number" value={yesterday_1} onChange={e => setYesterday_1(e.target.value)} required/>
+                            </div>
+                            
+                            <div className={styles.headerInputContainer} style={{ display: 'none' }}>
+                                <p className='inputTitle'>Valor do dia anterior</p>
+                                <input className='inputContent' type="number" value={yesterday_diff} onChange={e => setYesterday_diff(e.target.value)} required/>
+                            </div>
+                            
+                            <div className={styles.headerInputContainer}>
+                                <p className='inputTitle'>7 dias atrás</p>
+                                <input className='inputContent' type="number" value={last_week} onChange={e => setLast_week(e.target.value)} required/>
+                            </div>
+                            
+                            <div className={styles.headerInputContainer}>
+                                <p className='inputTitle'>30 dias atrás</p>
+                                <input className='inputContent' type="number" value={last_month} onChange={e => setLast_month(e.target.value)} required/>
+                            </div>
+                            
+                            <div className={styles.headerInputContainer}>
+                                <p className='inputTitle'>365 dias atrás</p>
+                                <input className='inputContent' type="number" value={last_year} onChange={e => setLast_year(e.target.value)} required/>
+                            </div>
+
+                            <div className={styles.headerInputContainer} style={{ marginRight: 0, width: 40 }}>
+                                <div className='buttonSubmit' style={{ marginTop: 26 }}>
+                                    <label htmlFor="send">
+                                        <input id="send" type="submit" style={{ display: 'none' }}/>
+                                        <i className="fas fa-redo-alt" style={{ padding: 12, cursor: 'pointer' }}></i>
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
                 <div className={`${styles.body} margin-page`} style={{ marginBottom: 24 }}>
                     <div style={{ marginTop: 24 }}>
-                        <h1 className="title-card">Previsão da cotação estimada para amanhã</h1>
+                        <h1 className="title-card">Previsão da cotação de amanhã</h1>
                         <div className="card">
-                            <div style={{ display: 'flex' }}>
+                            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                                 <div style={{ display: 'flex', alignItems: 'center', width: '100%', justifyContent: 'center' }}>
+                                    <p style={{ fontWeight: 'bold', fontSize: 80 }}><span style={{ fontSize: '16vw', color: '#ff5f4b', margin: '0 0 0 40px'}}>{props.dataSearch.result.toFixed(2)}</span></p>
                                     <img src="soy.png" style={{ width: '16vw' }}/>
-                                    <p style={{ fontWeight: 'bold', fontSize: 80 }}><span style={{ fontSize: '16vw', color: '#BC574A', margin: '0 0 0 40px'}}>{props.dataSearch.result.toFixed(2)}</span></p>
                                 </div>
+                                <strong style={{ fontSize: 24 }}>Acertividade de <span style={{ color: '#ff5f4b' }}>80%</span></strong>
                             </div>
                         </div>
                     </div>
-                    {/* <div className="responsiveColumn" style={{ marginTop: 24, display: 'flex' }}>
-                        <div style={{width: '100%', marginRight: 12}}>
-                            <h1 className="title-card">Dia anterior</h1>
-                            <div className="card">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Velit aliquet sagittis id consectetur. Est placerat in egestas erat imperdiet sed euismod nisi porta. Urna porttitor rhoncus dolor purus non enim praesent. Adipiscing enim eu turpis egestas pretium aenean. Habitant morbi tristique senectus et. Nulla pellentesque dignissim enim sit amet venenatis. Ipsum dolor sit amet consectetur. </p>
-                            </div>
-                        </div>
-                        <div style={{width: '100%', marginLeft: 12}}>
-                            <h1 className="title-card">Próximo dia</h1>
-                            <div className="card">
-                                <img src="./fakeGraph.png" style={{ width: '50%', margin: 'auto', display: 'flex' }}/>
-                            </div>
-                        </div>
-                    </div> */}
+                    <div className="responsiveColumn" style={{ marginTop: 24, display: 'flex' }}>
+                        <NextDays title="Em 02 dias" value={"7.4"}/>
+                        <NextDays title="Em 03 dias" value={"7.4"}/>
+                        <NextDays title="Em 04 dias" value={"7.4"}/>
+                        <NextDays title="Em 05 dias" value={"7.4"}/>
+                        <NextDays title="Em 06 dias" value={"7.4"}/>
+                        <NextDays title="Em 07 dias" value={"7.4"} marginRight={0}/>
+                    </div>
+                </div>
+                <div className={styles.noneMore1024} onClick={() => window.location.reload()}>
+                    <div className='inputContainer' style={{ fontWeight: 'bold' }}>
+                        <button className='buttonSubmit'> Nova consulta </button>
+                    </div>
                 </div>
             </div>
         );
