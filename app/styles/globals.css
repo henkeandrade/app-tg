@@ -4,7 +4,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: #f1f4f1;
+  background-color: #ebfaf2;
 }
 
 * { box-sizing: border-box; }
@@ -27,16 +27,19 @@ button, input[type="submit"], input[type="reset"] {
 
 
 .card {
-  background-color: #fff;
+  border-radius: 50px;
+  background: #ebfaf2;
+  box-shadow:  20px 20px 60px #c8d5ce,
+               -20px -20px 60px #ffffff;
   border-radius: 4px;
   padding: 16px;
   width: 100%;
-  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
 }
 
 .title-card {
   margin: 0 0 8px 0;
   color: #2D2D2D;
+  font-size: 36px;
 }
 
 /* configurar input */
@@ -53,12 +56,19 @@ button, input[type="submit"], input[type="reset"] {
   font-weight: bold;
   color: #2D2D2D;
 }
+
 .inputContent {
   width: 100%;
   padding: 12px;
   border-radius: 4px;
   border: 0;
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+
+  
+  border-radius: 10px;
+  background: linear-gradient(145deg, #fff, #fbffff);
+  box-shadow:  20px 20px 60px #c8d5ce,
+              -20px -20px 60px #ffffff;
 }
 .inputDayContainer {
   display: flex;
@@ -67,10 +77,14 @@ button, input[type="submit"], input[type="reset"] {
 
 /* configurar botão */
 .buttonSubmit {
-  background-color: #BC574A;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #ff5f4b, #ec7667);
+  box-shadow:  20px 20px 60px #c8d5ce,
+              -20px -20px 60px #ffffff;
+
+  background-color: #ff5f4b;
   transition: ease-in-out all 200ms;
   height: 40px;
-  border-radius: 4px;
   color: #FFF;
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
   cursor: pointer;
@@ -97,5 +111,8 @@ button, input[type="submit"], input[type="reset"] {
   .responsiveColumn .card {
     margin-left: 0 !important;
     margin-right: 0 !important;
+  }
+  .title-card {
+    font-size: 24px;
   }
 }
