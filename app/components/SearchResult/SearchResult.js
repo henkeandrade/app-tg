@@ -40,7 +40,7 @@ export default function SearchResult(props) {
                     <div onClick={() => window.location.reload()} className={styles.headerPage}>
                         <img src="./logo.png" className={styles.logo}/>
                     </div>
-                    <div className={styles.noneLess1024}>
+                    <div className={styles.noneLess1024} style={{ marginBottom: 56 }}>
                         <form onSubmit={() => submit()}>
                             <div className={styles.headerInputContainer}>
                                 <p className='inputTitle'>Hoje</p>
@@ -86,7 +86,7 @@ export default function SearchResult(props) {
                 <div className={`${styles.body} margin-page`} style={{ marginBottom: 24 }}>
                     <div style={{ marginTop: 24 }}>
                         <h1 className="title-card">Previsão da cotação de amanhã</h1>
-                        <div className="card">
+                        <div className="card" style={{ background: "#cdf3df" }}>
                             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                                 <div style={{ display: 'flex', alignItems: 'center', width: '100%', justifyContent: 'center' }}>
                                     <p style={{ fontWeight: 'bold', fontSize: 80 }}><span style={{ fontSize: '16vw', color: '#ff5f4b', margin: '0 0 0 40px'}}>{props.dataSearch.result.toFixed(2)}</span></p>
@@ -96,7 +96,7 @@ export default function SearchResult(props) {
                             </div>
                         </div>
                     </div>
-                    <div className="responsiveColumn" style={{ marginTop: 24, display: 'flex' }}>
+                    <div className="responsiveColumn" style={{ margin: '56px 0', display: 'flex' }}>
                         <NextDays title="Em 02 dias" value={"7.4"}/>
                         <NextDays title="Em 03 dias" value={"7.4"}/>
                         <NextDays title="Em 04 dias" value={"7.4"}/>
@@ -106,7 +106,7 @@ export default function SearchResult(props) {
                     </div>
                 </div>
                 <div className={styles.noneMore1024} onClick={() => window.location.reload()}>
-                    <div className='inputContainer' style={{ fontWeight: 'bold' }}>
+                    <div className='inputContainer' style={{ fontWeight: 'bold' , paddingBottom: '12vh'}}>
                         <button className='buttonSubmit'> Nova consulta </button>
                     </div>
                 </div>

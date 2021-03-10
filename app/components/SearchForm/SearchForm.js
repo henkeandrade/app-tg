@@ -9,12 +9,12 @@ export default function SearchForm(props) {
     // const [dayStart, setDayStart] = useState('');
     // const [dayEnd, setDayEnd] = useState('');
     // const [plantedArea, setPlantedArea] = useState('');
-    const [yesterday, setYesterday] = useState(0);
-    const [yesterday_1, setYesterday_1] = useState(0);
-    const [yesterday_diff, setYesterday_diff] = useState(0);
-    const [last_week, setLast_week] = useState(0);
-    const [last_year, setLast_year] = useState(0);
-    const [last_month, setLast_month] = useState(0);
+    const [yesterday, setYesterday] = useState(1);
+    const [yesterday_1, setYesterday_1] = useState(1);
+    const [yesterday_diff, setYesterday_diff] = useState(1);
+    const [last_week, setLast_week] = useState(1);
+    const [last_year, setLast_year] = useState(1);
+    const [last_month, setLast_month] = useState(1);
 
     // função para enviar os dados de uma nova requisição
     function submit() {

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+
 html,
 body {
   padding: 0;
@@ -5,6 +7,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: #ebfaf2;
+  font-family: 'Ubuntu', sans-serif;
+  color: #5f190c !important;
 }
 
 * { box-sizing: border-box; }
@@ -38,7 +42,6 @@ button, input[type="submit"], input[type="reset"] {
 
 .title-card {
   margin: 0 0 8px 0;
-  color: #2D2D2D;
   font-size: 36px;
 }
 
@@ -54,7 +57,7 @@ button, input[type="submit"], input[type="reset"] {
 .inputTitle {
   margin-bottom: 8px;
   font-weight: bold;
-  color: #2D2D2D;
+  z-index: 1;
 }
 
 .inputContent {
@@ -82,17 +85,17 @@ button, input[type="submit"], input[type="reset"] {
   box-shadow:  20px 20px 60px #c8d5ce,
               -20px -20px 60px #ffffff;
 
-  background-color: #ff5f4b;
   transition: ease-in-out all 200ms;
   height: 40px;
   color: #FFF;
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
   cursor: pointer;
+  transition: ease-in-out 300ms all;
 }
 
 .buttonSubmit:hover {
-  background-color: #fff;
-  color: #CC624E;
+  background: linear-gradient(145deg, #ec7667, #ff5f4b);
+  color: #5f190c;
 }
 
 @media only screen and (max-width: 1024px) {
