@@ -6,9 +6,9 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: #ebfaf2;
+  background-color: #343434;
   font-family: 'Ubuntu', sans-serif;
-  color: #5f190c !important;
+  color:#fff;
 }
 
 * { box-sizing: border-box; }
@@ -31,18 +31,14 @@ button, input[type="submit"], input[type="reset"] {
 
 
 .card {
-  border-radius: 50px;
-  background: #ebfaf2;
-  box-shadow:  20px 20px 60px #c8d5ce,
-               -20px -20px 60px #ffffff;
-  border-radius: 4px;
-  padding: 16px;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
   width: 100%;
 }
 
 .title-card {
   margin: 0 0 8px 0;
   font-size: 36px;
+  color: #fff;
 }
 
 /* configurar input */
@@ -58,6 +54,7 @@ button, input[type="submit"], input[type="reset"] {
   margin-bottom: 8px;
   font-weight: bold;
   z-index: 1;
+  color: #fff;
 }
 
 .inputContent {
@@ -65,13 +62,6 @@ button, input[type="submit"], input[type="reset"] {
   padding: 12px;
   border-radius: 4px;
   border: 0;
-  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
-
-  
-  border-radius: 10px;
-  background: linear-gradient(145deg, #fff, #fbffff);
-  box-shadow:  20px 20px 60px #c8d5ce,
-              -20px -20px 60px #ffffff;
 }
 .inputDayContainer {
   display: flex;
@@ -80,22 +70,24 @@ button, input[type="submit"], input[type="reset"] {
 
 /* configurar botão */
 .buttonSubmit {
-  border-radius: 10px;
-  background: linear-gradient(145deg, #ff5f4b, #ec7667);
-  box-shadow:  20px 20px 60px #c8d5ce,
-              -20px -20px 60px #ffffff;
-
+  border-radius: 4px;
+  background-color: #f82f2f;
   transition: ease-in-out all 200ms;
   height: 40px;
   color: #FFF;
-  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
   cursor: pointer;
   transition: ease-in-out 300ms all;
 }
 
 .buttonSubmit:hover {
-  background: linear-gradient(145deg, #ec7667, #ff5f4b);
-  color: #5f190c;
+  background-color: #fff;
+  color: #f82f2f;
+}
+
+
+.responsiveColumn {
+  flex-direction: row;
+  display: flex;
 }
 
 @media only screen and (max-width: 1024px) {
