@@ -86,13 +86,14 @@ export default function SearchResult(props) {
                 <div className={`${styles.body} margin-page`} style={{ marginBottom: 24 }}>
                     <div style={{ marginTop: 24 }}>
                         <h1 className="title-card">Previsão da cotação de amanhã</h1>
-                        <div className="card" style={{ background: "#cdf3df" }}>
-                            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                                <div style={{ display: 'flex', alignItems: 'center', width: '100%', justifyContent: 'center' }}>
-                                    <p style={{ fontWeight: 'bold', fontSize: 80 }}><span style={{ fontSize: '16vw', color: '#ff5f4b', margin: '0 0 0 40px'}}>{props.dataSearch.result.toFixed(2)}</span></p>
-                                    <img src="soy.png" style={{ width: '16vw' }}/>
-                                </div>
-                                <strong style={{ fontSize: 24 }}>Acertividade de <span style={{ color: '#ff5f4b' }}>80%</span></strong>
+                        <div className="card responsiveColumn" style={{ justifyContent: "space-between"}}>
+                            <div style={{ width: '100%' }}>
+                                <p style={{ fontSize: 24, margin: '16px 0' }}>Preço da saca:</p>
+                                <p style={{ fontWeight: 'bold', fontSize: 64, color: '#f82f2f' }}>R$ {props.dataSearch.result.toFixed(2).replace('.', ',')}</p>
+                            </div>
+                            <div style={{ width: '100%' }}>
+                                <p style={{ fontSize: 24, margin: '16px 0' }}>Porcentagem de acertividade(PA):</p>
+                                <p style={{ fontWeight: 'bold', fontSize: 64, color: '#f82f2f' }}>PA: 80 %</p>
                             </div>
                         </div>
                     </div>

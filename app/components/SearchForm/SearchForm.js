@@ -36,29 +36,7 @@ export default function SearchForm(props) {
                 <p className={styles.logoText}>Sua calculadora para<br /><strong>cotação de soja</strong></p>
             </div>
             <form className={styles.containerForm} onSubmit={()=>submit()}>
-                {/* <div className='inputContainer'>
-                    <p className='inputTitle'>Selecione sua cidade</p>
-                    <select className='inputContent' defaultValue={city} onChange={e => setCity(e.target.value)} required>
-                        <option value="" disabled hidden>Escolha uma cidade</option>
-                        {cities.map(city => {
-                            return <option key={city.name} value={city.name}>{city.name}</option>
-                        })}
-                    </select>
-                </div>
-                 */}
-                
-                {/* <div className='inputDayContainer'>
-                    <div className='inputContainer' style={{ marginRight: 8 }}>
-                        <p className='inputTitle'>Do dia</p>
-                        <input className='inputContent' value={dayStart} onChange={e => setDayStart(e.target.value)} required/>
-                    </div>
-                    <div className='inputContainer' style={{ marginLeft: 0 }}>
-                        <p className='inputTitle'>Até o dia</p>
-                        <input className='inputContent' value={dayEnd} onChange={e => setDayEnd(e.target.value)} required/>
-                    </div>
-                </div> */}
-
-                <h1 className='inputContainer'>Insira os valores das cotações:</h1>
+                <h1 className='inputContainer'>Insira os valores das cotações em R$:</h1>
                 
                 <div className='inputContainer'>
                     <p className='inputTitle'>Hoje</p>
