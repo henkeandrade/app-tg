@@ -6,7 +6,7 @@ export default function NextDays(props) {
             <h1 className="title-card" style={{ fontSize: 24 }}>{props.title}</h1>
             <div className={`${styles.cardNextDays} card`}>
                 <p style={{ marginTop: 12}}>R$ {props.value}</p>
-                <p style={{ marginTop: 12}}>AC: 40% </p>
+                <p style={{ marginTop: 12}}>PA: 40% </p>
             </div>
         </div>
     )
