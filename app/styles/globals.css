@@ -5,10 +5,16 @@ body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: #343434;
+      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background: #41295a;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2F0743, #41295a);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2F0743, #41295a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   font-family: 'Ubuntu', sans-serif;
   color:#fff;
+}
+
+textarea:focus, input:focus{
+  outline: none;
 }
 
 * { box-sizing: border-box; }
@@ -71,17 +77,18 @@ button, input[type="submit"], input[type="reset"] {
 /* configurar botão */
 .buttonSubmit {
   border-radius: 4px;
-  background-color: #f82f2f;
+  background: #AAFFA9;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #11FFBD, #AAFFA9);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #11FFBD, #AAFFA9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   transition: ease-in-out all 200ms;
   height: 40px;
-  color: #FFF;
+  color: #333;
   cursor: pointer;
   transition: ease-in-out 300ms all;
 }
 
 .buttonSubmit:hover {
-  background-color: #fff;
-  color: #f82f2f;
+  background: #fff !important;
 }
 
 
