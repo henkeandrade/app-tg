@@ -65,11 +65,11 @@ export default function SearchResult(props) {
                         <div className="card responsiveColumn" style={{ justifyContent: "space-between"}}>
                             <div style={{ width: '100%' }}>
                                 <p style={{ fontSize: 24, margin: '16px 0' }}>Preço da saca:</p>
-                                <p style={{ fontWeight: 'bold', fontSize: 64, color: '#AAFFA9' }}>R$ {props.dataSearch.result.toFixed(2).replace('.', ',')}</p>
+                                <p style={{ fontWeight: 'bold', fontSize: 88, color: '#AAFFA9' }}>R$ {props.dataSearch.result.toFixed(2).replace('.', ',')}</p>
                             </div>
                             <div style={{ width: '100%' }}>
                                 <p style={{ fontSize: 24, margin: '16px 0' }}>Porcentagem de acertividade(PA):</p>
-                                <p style={{ fontWeight: 'bold', fontSize: 64, color: '#AAFFA9' }}>PA: 80 %</p>
+                                <p style={{ fontWeight: 'bold', fontSize: 88, color: '#AAFFA9' }}>PA: 80 %</p>
                             </div>
                         </div>
                     </div>
