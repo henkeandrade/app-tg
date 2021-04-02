@@ -69,7 +69,7 @@ export default function SearchResult(props) {
                             </div>
                             <div style={{ width: '100%' }}>
                                 <p style={{ fontSize: 24, margin: '16px 0' }}>Porcentagem de acertividade(PA):</p>
-                                <p style={{ fontWeight: 'bold', fontSize: 88, color: '#AAFFA9' }}>PA: 80 %</p>
+                                <p style={{ fontWeight: 'bold', fontSize: 88, color: '#AAFFA9' }}>PA: 99,85 %</p>
                             </div>
                         </div>
                     </div>
