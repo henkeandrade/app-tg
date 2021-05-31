@@ -6,7 +6,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background: #41295a;  /* fallback for old browsers */
+    background: #65168d;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #65168d, #41295a);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #65168d, #41295a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   font-family: 'Ubuntu', sans-serif;
