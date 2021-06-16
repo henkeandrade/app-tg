@@ -39,6 +39,19 @@ export default function Home() {
         <title>CaproAgro</title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossOrigin="anonymous" />
         <link rel="sortcut icon" href="tt.png" type="image/gif" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9PYWZPPVXJ"></script>
+        <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-9PYWZPPVXJ', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
       </Head>
       {homePage == 'loading' ?
         <Loading /> : homePage ?
